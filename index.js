@@ -2,7 +2,7 @@ const  express = require('express'); // require to get access to express library
 const app = express();  // express handles the http request
 
 app.get('/', (req, res) => {
-    res.send({Hi : "there"});
+    res.send({bye : "buddy"});
 });
 
 const PORT = process.env.PORT || 5000 ; // whenever heroku runs application it can inject enviroment variable that are done in run time
