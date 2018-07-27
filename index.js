@@ -20,6 +20,7 @@ app.use(
 
 app.use(passport.initialize());
 app.use(passport.session());
+
   // express handles the http request
 
 require('./routes/authRoutes')(app);
