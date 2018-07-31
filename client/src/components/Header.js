@@ -11,7 +11,7 @@ class Header extends Component {
         case null:
             return ;
         default:
-            return <li><a>LogOut</a></li>;
+            return <li><a href="/api/logout">LogOut</a></li>;
 
       }
   }
