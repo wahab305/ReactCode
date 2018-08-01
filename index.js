@@ -2,6 +2,7 @@ const  express = require('express'); // require to get access to express library
 const mongoose = require('mongoose');
 const cookieSession = require('cookie-session');
 const passport = require('passport');
+const bodyParser = require('body-parser');
 const keys = require('./config/keys');
 const User = require('./models/User');
 require('./services/passport');
@@ -10,6 +11,10 @@ require('./services/passport');
 mongoose.connect(keys.mongoURI);
 
 const app = express();
+
+
+app.use(bodyParser.json());
+
 
 app.use(
   cookieSession({
@@ -24,7 +29,7 @@ app.use(passport.session());
   // express handles the http request
 
 require('./routes/authRoutes')(app);
-
+require('./routes/billingRoutes')(app);
 
 const PORT = process.env.PORT || 5000 ; // whenever heroku runs application it can inject enviroment variable that are done in run time
 app.listen(PORT);
