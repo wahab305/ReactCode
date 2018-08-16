@@ -5,7 +5,7 @@
 # to run, type ./sendgrid_webhook.sh in the terminal
 
 function localtunnel {
-lt -s hslfdhasdlf --port 3000
+lt -s sdljjsdfkjglsdfjlgjsdlfjgklfjgksj --port 5000
 }
 
 until localtunnel; do
@@ -13,4 +13,4 @@ echo "localtunnel server crashed"
 sleep 2
 done
 
-//  lt -s http://hslfdhasdlf.localtunnel.me --port 3000
+#  lt -s http://hslfdhasdlf.localtunnel.me --port 3000
